@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="mk" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ROBLOX забранета во Македонија — Национален револт</title>
+  <meta name="description" content="Влада на Македонија најави национална забрана за ROBLOX од 1 јануари 2026. Протести, реакции и што понатаму со ROBUX." />
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%23000000'/%3E%3Crect x='28' y='28' width='44' height='44' transform='rotate(15 50 50)' fill='%23ffffff'/%3E%3C/svg%3E">
+  <style>
+    :root{
+      --bg: #0b0e13; --bg-soft:#121720; --card:#0f131a; --text:#e6ebf3; --muted:#9aa4b2; --brand:#7c9cff; --accent:#b7f; --ok:#22c55e; --warn:#f59e0b; --danger:#ef4444; --border:#223042;
+    }
+    [data-theme="light"]{ --bg:#f7f8fb; --bg-soft:#ffffff; --card:#ffffff; --text:#0f172a; --muted:#475569; --brand:#3558ff; --accent:#6b3bff; --border:#e5e7eb; }
+    html,body{ height:100%; }
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg); color: var(--text); line-height:1.6; letter-spacing:.01em;
+    }
+    .container{ width:min(1100px, 92%); margin:0 auto; }
+    header.nav{ position:sticky; top:0; z-index:50; backdrop-filter:saturate(1.2) blur(10px); background:color-mix(in oklab, var(--bg), transparent 40%); border-bottom:1px solid var(--border); }
+    .nav-inner{ display:flex; align-items:center; gap:14px; padding:12px 0; }
+    .brand{ display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.4px; }
+    .brand .logo{ width:28px; height:28px; border-radius:10px; background:var(--text); display:grid; place-items:center; color:var(--bg); font-weight:900; }
+    .chip{ font-size:.8rem; padding:.25rem .6rem; border:1px solid var(--border); border-radius:999px; color:var(--muted); }
+    .grow{ flex:1; }
+    .btn{ appearance:none; border:1px solid var(--border); background:var(--bg-soft); color:var(--text); padding:.55rem .9rem; border-radius:12px; cursor:pointer; font-weight:600; }
+    .btn:hover{ border-color:color-mix(in oklab, var(--border), var(--text) 40%); }
+    .btn.ghost{ background:transparent; }
+    .btn.primary{ background:linear-gradient(135deg, color-mix(in oklab, var(--brand), white 10%), var(--accent)); border:none; color:white; box-shadow:0 10px 30px rgba(123, 102, 255,.25); }
+    .hero{ padding:38px 0 22px; display:grid; gap:18px; }
+    .headline{ font-size:clamp(1.8rem, 1.2rem + 2.4vw, 3.1rem); line-height:1.1; font-weight:900; letter-spacing:-.01em; }
+    .lead{ color:var(--muted); font-size:clamp(1rem, .9rem + .35vw, 1.2rem); }
+    .meta{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; color:var(--muted); }
+    .tags{ display:flex; gap:8px; flex-wrap:wrap; }
+    .tag{ font-size:.78rem; padding:.28rem .6rem; border-radius:999px; background:color-mix(in oklab, var(--brand), transparent 82%); color:color-mix(in oklab, var(--brand), white 10%); border:1px solid color-mix(in oklab, var(--brand), var(--border) 70%); }
+    .card{ background:var(--card); border:1px solid var(--border); border-radius:20px; padding:22px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+    .content{ display:grid; grid-template-columns: 1fr; gap:22px; }
+    @media (min-width: 960px){ .content{ grid-template-columns: 1fr 320px; } }
+    article{ font-size:1.05rem; }
+    article p{ margin:0 0 1rem; }
+    article .quote{ border-left:4px solid var(--brand); padding-left:14px; color:var(--text); background:color-mix(in oklab, var(--brand), transparent 94%); border-radius:8px; margin:14px 0; }
+    .aside{ display:grid; gap:14px; position:sticky; top:84px; height:fit-content; }
+    .stat{ display:flex; justify-content:space-between; border:1px dashed var(--border); padding:12px 14px; border-radius:14px; color:var(--muted); }
+    .progressbar{ position:fixed; inset:0 0 auto 0; height:3px; background:linear-gradient(90deg, var(--accent), var(--brand)); transform-origin:left; width:0; z-index:60; }
+    .footer{ margin:38px 0 60px; color:var(--muted); display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; }
+    .share{ display:flex; gap:8px; flex-wrap:wrap; }
+    .pill{ padding:.5rem .8rem; border-radius:999px; border:1px solid var(--border); background:var(--bg-soft); color:var(--text); }
+    .notice{ font-size:.92rem; border-left:4px solid var(--warn); padding:10px 12px; background:color-mix(in oklab, var(--warn), transparent 90%); border-radius:8px; }
+    .toc{ display:grid; gap:6px; }
+    .toc a{ color:var(--muted); text-decoration:none; font-size:.95rem; }
+    .toc a:hover{ color:var(--text); }
+    .kbd{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:.8rem; padding:.15rem .35rem; border:1px solid var(--border); border-bottom-width:2px; border-radius:6px; background:var(--bg-soft); color:var(--text); }
+    .backtotop{ position:fixed; right:18px; bottom:18px; opacity:0; transform:translateY(10px); transition:.25s ease; }
+    .backtotop.show{ opacity:1; transform:none; }
+    .accordion{ border:1px solid var(--border); border-radius:14px; overflow:hidden; }
+    .accordion details{ border-top:1px solid var(--border); }
+    .accordion details:first-child{ border-top:none; }
+    .accordion summary{ list-style:none; cursor:pointer; padding:14px 16px; font-weight:700; }
+    .accordion summary::-webkit-details-marker{ display:none; }
+    .accordion .panel{ padding:0 16px 16px; color:var(--muted); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "ROBLOX забранета во Македонија: Национален револт по контроверзната одлука",
+    "datePublished": "2025-08-16",
+    "dateModified": "2025-08-16",
+    "author": {"@type":"Organization","name":"Редакција"},
+    "publisher": {"@type":"Organization","name":"ТехноИнфо"},
+    "description": "Влада на Македонија најави национална забрана за ROBLOX од 1 јануари 2026. Протести, реакции и што понатаму со ROBUX.",
+    "inLanguage": "mk"
+  }
+  </script>
+</head>
+<body>
+  <div class="progressbar" id="progress"></div>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="logo">R</div>
+        <span>ТехноИнфо</span>
+        <span class="chip" id="today"></span>
+      </div>
+      <div class="grow"></div>
+      <button class="btn ghost" id="themeBtn" title="Темна/светла тема">🌓</button>
+      <button class="btn" id="shareBtn" title="Сподели">Сподели</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="headline">ROBLOX забранета во Македонија: Национален револт по контроверзната одлука</h1>
+      <p class="lead">Владата најави целосна забрана на ROBLOX со важност од <strong>1 јануари 2026</strong>. Ученици, родители и гејмери реагираат, барајќи транспарентност и одговори.</p>
+      <div class="meta">
+        <span>Автор: <strong>Редакција</strong></span>
+        <span>·</span>
+        <span>Време за читање: <span id="readTime">≈ 3 мин</span></span>
+        <div class="tags">
+          <span class="tag">#ROBLOX</span>
+          <span class="tag">#Македонија</span>
+          <span class="tag">#Забрана</span>
+          <span class="tag">#Млади</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <article class="card" id="article">
+        <p>Во потег што предизвика шок низ целата земја, Владата на Македонија објави национална забрана за популарната онлајн видео игра ROBLOX. Одлуката, која стапува на сила на <strong>1 Јануари 2026 година</strong>, предизвика протести и конфузија кај играчите но и не кај родителите. Во официјалното соопштение се наведуваат неодредени „загрижености за националната безбедност на деца и малолетници“ како причина за забраната.</p>
+        <p>Оваа ненадејна мерка остави многумина збунети. ROBLOX, платформа позната по содржината што ја создаваат самите корисници и нејзините виртуелни светови, има голема база на играчи во Македонија. Особено кај помладите, играта стана дел од секојдневната дигитална култура. Затоа, забраната наиде на силен отпор.</p>
+        <p class="quote">„Ова е скандал!“ изјави <strong>Ања Петрова</strong>, 12-годишна играчка на ROBLOX. „Оваа игра е огромен дел од мојот живот, а сега едноставно ја нема. Неправедна е и нема смисла.“ Нејзиното мислење го делат и безброј други млади низ целата земја, кои својот гнев го изразија на социјалните мрежи.</p>
+        <p>Нејасното образложение од Владата само поттикна шпекулации. Се појавија теории, од Македонија ги копира САД до ROBLOX не се гриши за безбедноста на играјачите. Сепак, до сега не се презентирани конкретни докази. Недостатокот на транспарентност дополнително го разгоре незадоволството на јавноста и младите.</p>
+        <p>Основачот и извршен директор на ROBLOX Corporation, <strong>Дејвид Басзуки</strong>, сè уште нема официјална изјава. Но извори блиски до компанијата тврдат дека не се разгледуваат правни опции за оспорување на одлуката. „Длабоко сме загрижени за нашите македонски играчи“, изјавил анонимен извор. „Посветени сме на тоа да најдеме начин тие повторно да уживаат во ROBLOX и да бидат безбедни.“</p>
+        <p>Прашање останува и иднината на средствата вложени во <strong>ROBUX</strong>, виртуелната валута во играта. Многу играчи вложиле значителни пари, а Владата засега нема дадено упатства за поврат. За сега, се препорачува играчите да се обратат директно до поддршката на ROBLOX, иако поради огромниот број барања можно е одговорите да доцнат.</p>
+        <p>Ситуацијата е сè уште напната. Се очекува протестите да продолжат, а властите се соочуваат со зголемен притисок да дадат појасно објаснување. Иднината на ROBLOX во Македонија останува неизвесна, а оваа забрана покренува пошироки прашања за безбендонста на играјачите на ROBLOX како и други видеоигри. Наредните денови ќе бидат клучни за исходот на оваа необична криза.</p>
+
+        <h3 id="faq">Чести прашања</h3>
+        <div class="accordion" aria-labelledby="faq">
+          <details>
+            <summary>Кога стапува на сила забраната?</summary>
+            <div class="panel">На 1 јануари 2026 година, според најавите на Владата.</div>
+          </details>
+          <details>
+            <summary>Што со вложените ROBUX?</summary>
+            <div class="panel">Моментално нема официјални насоки од институциите. Препорачливо е да се контактира поддршката на ROBLOX.</div>
+          </details>
+          <details>
+            <summary>Дали има правни оспорувања?</summary>
+            <div class="panel">Извори блиски до компанијата навестуваат дека се разгледуваат опции, но нема официјална потврда.</div>
+          </details>
+        </div>
+      </article>
+
+      <aside class="aside">
+        <div class="card">
+          <strong>На кратко</strong>
+          <div class="toc" aria-label="Навигација низ содржина">
+            <a href="#article">Почеток</a>
+            <a href="#faq">ЧПП</a>
+          </div>
+        </div>
+        <div class="stat"><span>Забрана стапува</span><strong>01.01.2026</strong></div>
+        <div class="stat"><span>Проценето читање</span><strong id="rt2">3 мин</strong></div>
+        <div class="card">
+          <strong>Сподели</strong>
+          <div class="share">
+            <button class="btn ghost" data-share="copy">Копирај линк</button>
+            <button class="btn ghost" data-share="native">Системско споделување</button>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="footer">
+      <div>
+        © <span id="year"></span> ТехноИнфо — Сите права задржани
+      </div>
+      <div class="share">
+        <span class="pill">Контакт: news@example.mk</span>
+        <span class="pill">Политика на приватност</span>
+      </div>
+    </section>
+  </main>
+
+  <button id="backTop" class="btn backtotop" aria-label="Назад горе">↑</button>
+
+  <script>
+    // Theme toggle with persistence
+    const root = document.documentElement;
+    const themeBtn = document.getElementById('themeBtn');
+    const saved = localStorage.getItem('theme');
+    if(saved) document.documentElement.setAttribute('data-theme', saved);
+    themeBtn.addEventListener('click', ()=>{
+      const cur = root.getAttribute('data-theme');
+      const next = cur === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+
+    // Today pill & footer year
+    const now = new Date();
+    document.getElementById('today').textContent = now.toLocaleDateString('mk-MK', { weekday:'short', day:'2-digit', month:'short', year:'numeric' });
+    document.getElementById('year').textContent = now.getFullYear();
+
+    // Reading time estimate
+    function estimateReadTime(el){
+      const words = el.textContent.trim().split(/\s+/).length;
+      const wpm = 220; // avg reading speed
+      const mins = Math.max(1, Math.round(words / wpm));
+      return `≈ ${mins} мин`;
+    }
+    const article = document.getElementById('article');
+    const timeText = estimateReadTime(article);
+    document.getElementById('readTime').textContent = timeText;
+    document.getElementById('rt2').textContent = timeText.replace('≈ ','');
+
+    // Progress bar
+    const progress = document.getElementById('progress');
+    const max = () => document.body.scrollHeight - innerHeight;
+    addEventListener('scroll', ()=>{
+      const ratio = Math.min(1, scrollY / Math.max(1, max()));
+      progress.style.width = (ratio * 100) + '%';
+    }, {passive:true});
+
+    // Back to top
+    const backTop = document.getElementById('backTop');
+    const toggleBackTop = ()=>{
+      if (window.scrollY > 400) backTop.classList.add('show');
+      else backTop.classList.remove('show');
+    };
+    addEventListener('scroll', toggleBackTop, {passive:true});
+    backTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+    // Share buttons
+    function copyLink(){
+      const url = location.href;
+      navigator.clipboard?.writeText(url).then(()=>{
+        alert('Линкот е копиран.');
+      }).catch(()=>{
+        prompt('Копирај рачно:', url);
+      });
+    }
+    async function nativeShare(){
+      const data = { title: document.title, text: 'Прочитај повеќе:', url: location.href };
+      if (navigator.share) {
+        try { await navigator.share(data); } catch(e) {}
+      } else {
+        copyLink();
+      }
+    }
+    document.querySelectorAll('[data-share="copy"]').forEach(b=> b.addEventListener('click', copyLink));
+    document.querySelectorAll('[data-share="native"]').forEach(b=> b.addEventListener('click', nativeShare));
+    document.getElementById('shareBtn').addEventListener('click', nativeShare);
+
+    // Keyboard shortcut: press "D" to toggle theme
+    addEventListener('keydown', (e)=>{
+      if (e.key.toLowerCase() === 'd') themeBtn.click();
+    });
+  </script>
+</body>
+</html>
